@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <script defer src="Video_script.JS"></script>
+<style>
+  .fas{
+    font-size:30px;
+    border:0;
+    outline:0;
+    background-color:rgba(255, 99, 71, 0)
+  }
+  body{
+    background-image: url(backimgs1.jpeg);
+    background-repeat: no-repeat;
+  }
+  h1{
+    text-align: center;
+  }
+
+  
+</style>
+</head>
+
+<body>
+    <header>
+    <h1>Video Player</h1>
+    </header>
+  <div id="playList" style="text-align:center">
+
+     
+    <button class="fas fa-compress"onclick="makeFull()"></button>
+    <button class="fas fa-search-plus"onclick="makeBig()"></button>
+    <button class ="fas fa-search-minus"onclick="makeSmall()"></button>
+    <button class ="fas fa-compress-alt" onclick="makeNormal()"></button>
+    <button class ="fas fa-camera" onclick="capture()"></button>
+    <button class ="fas fa-align-right" onclick="showList()"></button>
+    <button class ="fas fa-angle-double-left" id="slow" onclick="slow(1)" ></button>
+    <button class ="fas fa-sync-alt" id="slow" onclick="slow(2)" ></button>
+    <button class ="fas fa-angle-double-right" id="slow" onclick="slow(3)" ></button>  
+    <button class="fas fa-volume-up" id="volumeup"onclick="volumeUp()" ></button>
+    <button type="button"  class="fas fa-volume-down"  id="volumdown"onclick="volumeDown()"></button>
+    
+    <br><br>
+    <figure>
+     
+      <video src="mov_bbb.mp4" type="video/mp4" id="video1" width="540" ></video>
+      <figcaption>
+
+        <button class="fas fa-fast-backward"  href="#" id="skipbw"></button>
+        <button class="fas fa-backward" href="#" id="prv"></button>
+        <button class="fas fa-play-circle" onclick="playPause()"></button>
+        <button class="fas fa-forward" id="next"></button>
+        <button class="fas fa-fast-forward" href="#" id="skipfw"></button>
+
+
+        
+      </figcaption>
+    </figure>
+    
+
+    <canvas id="canvas" style="overflow:auto; width:420px;" ></canvas>
+    <br>
+    <input type = "file"   id="videofile" accept="mp4" value=""></input>
+    <input type="button" class="fas fa-file-import" id="submit" value="submit"></input>
+    <div id ="list"></div>
+  </div>
+
+  <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+<!-- <figure>
+    <h1>Video.js ver</h1>
+    <div style="width:500px;">
+      <video id="videoPlayer" class="video-js vjs-big-play-centered" muted controls data-setup="{}">
+        <source src="mov_bbb.mp4" type="video/mp4">
+      </video>
+    </div>
+  </figure>  -->
+
+  <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+</body>
+
+</html>
