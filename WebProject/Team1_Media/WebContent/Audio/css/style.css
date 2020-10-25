@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: #fff;
+	font-weight: 200;
+}
+
+.bg {
+	background: url('../img/Marshmellob.jpg') no-repeat center center/cover;
+	height: 100vh;
+	width: 100vw;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+}
+
+.player{
+	width: 400px;
+	height: 665px;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	margin: 10px 0 0 0;
+	box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.5), -3px -3px 50px rgba(0, 0, 0, 0.5);
+}
+
+.container{
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;	
+}
+
+
+
+#file{
+	display: none;
+}
+
+.top-icons{
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.top-icons a{
+	color: #fff;
+	font-size: 1.3em;
+}
+
+.top-icons a:hover{
+	color: #b9b6b6;
+}
+
+.img{
+	border-top: 3px solid #fff;
+	border-radius: 50%;
+}
+
+.img img {
+	margin: 50px 0 0 55px;
+	width: 70%;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.img img:hover{
+	box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.5), -3px -3px 50px rgba(0, 0, 0, 0.5);
+}
+
+.text{
+	text-align: center;
+	margin: 10px 0;
+}
+
+.text h1{
+	font-size: 3em;
+}
+
+.text h4{
+	font-size: 1.4em;
+}
+
+.time{
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0 0 0;
+}
+
+.time p{
+	color: #fff;
+	font-size: 1.1em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.seekbar{
+	-webkit-appearance: none;
+	max-width: 360px;
+	width: 100%;
+	height: 6px;
+	background:  rgba(255, 255, 255, 0.3);
+	outline: none;
+	margin: 5px 0;
+	position: absolute;
+	top: 472px;
+	border-radius: 12px;
+}
+
+.seekbar::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	width: 13px;
+	height: 13px;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.fill{
+	width: 100%;
+	height: 6px;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 12px;
+}
+
+.btns1, .btns2{
+	text-align: center;
+}
+
+.btns1{
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0px 0px;
+}
+.btns1 a{
+	color: #fff;
+	font-size: 1.4em;
+}
+.random-active{
+	color: #fff;
+}
+.random-inactive{
+	color: #fff;
+	opacity: 0.6;
+}
+.retweet-active{
+	color: #fff;
+}
+.retweet-inactive{
+	color: #fff;
+	opacity: 0.6;
+}
+
+.btns2 a{
+	color: #fff;
+	font-size: 1.8em;
+	margin: 0 22px;
+}
+
+.btns2 a:nth-child(1){
+	margin: 0 16.5px 0 0;
+}
+.btns2 a:nth-child(3){
+	border: 2px solid #fff;
+	padding: 12px 21px;
+	border-radius: 50%;
+}
+.btns2 a:nth-child(5){
+	margin: 0 0 0 16.5px;
+}
+
+.btns2 .fa-pause{
+	margin: 22px 0;
+	text-align: center;
+}
+.btns2 .fa-play{
+	margin: 22px 0;
+	text-align: center;
+}
+
+.vol{
+	text-align: center;
+	margin: 15px;
+}
+
+.volumebar{
+	-webkit-appearance: none;
+	width: 40%;
+	height: 6px;
+	background:  rgba(255, 255, 255, 0.3);
+	outline: none;
+	margin: 15px 10px;
+	border-radius: 12px;
+	position: absolute;
+	top: 615px;
+	left: 90px;
+}
+
+.volumebar::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	width: 13px;
+	height: 13px;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.vol a{
+	color: #fff;
+	font-size: 1em;
+	position: absolute;
+	top: 621px;
+	left: 280px;
+}

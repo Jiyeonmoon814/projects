@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shorcut icon" href="#">
+  <title>Player</title>
+</head>
+<body>
+  <div class="bg">
+    <section class="player">
+      <div class="container">
+		
+        <!-- ================ Top Icons ================ -->
+        
+        <div class="top-icons">
+       	  <a href="#">
+       	  	<i>
+       	  		<input type="file" id="file" accept="mp3/*" value=""/>
+		  		<label for="file" class="fa fa-plus"></label>
+		  	</i>
+		  </a>
+          <a href="#">
+          	<i>
+          	<select type="select" id="select">
+  				<option>./files/Covid-19.mp3</option>
+  				<option>./files/Body Shake.mp3</option>
+  				<option>./files/RAIN.mp3</option>
+  				<option>./files/ACIIID.mp3</option>
+  				<option>./files/Danzel.mp3</option>
+			</select>
+         	 </i>
+          </a>
+        </div>
+        
+        <!-- ================ img ================ -->
+
+        <div class="img">
+          <img src="img/Marshmello.jpg" alt="">
+        </div>
+
+        <!-- ================ Text ================ -->
+        
+        <div class="text">
+          <h1>Covid-19</h1>
+        </div>
+
+        <!-- ================ Time ================ -->
+
+        <div class="time">
+          <p id="flow">00:00</p>
+          <p id="total">00:00</p>
+        </div>
+        
+        <!-- ================ Seek Bar ================ -->
+        <div>
+          <div class="fill"></div>
+          <input type="range" class="seekbar" value="0" min="0" max="100" onchange="moveSeekBar(this)">
+        </div>
+        
+        <!-- ================ Play Buttons ================ -->
+        <div class="btns1">
+          <a href="#" onclick="retweet()" class="retweet-inactive" id="retweet"><i class="fa fa-retweet"></i></a>
+          <a href="#" onclick="random()" class="random-inactive" id="random"><i class="fa fa-random"></i></a>
+        </div>
+        <div class="btns2">
+          <a href="#" onclick="prevAudio()"><i class="fa fa-step-backward"></i></a>
+          <a href="#" onclick="backward()"><i class="fa fa-backward"></i></a>
+          <a href="#" class="play-btn" onclick="togglePlayPause()"><i class="fa fa-play"></i></a>
+          <a href="#" onclick="forward()"><i class="fa fa-forward"></i></a>
+          <a href="#" onclick="nextAudio()"><i class="fa fa-step-forward"></i></a>
+        </div>
+      </div>
+      
+      <!-- ================ Volume ================ -->
+	  <div class="vol">
+		  <input type="range" id="volumeRange" class="volumebar" value="50" min="0" max="100" onchange="changeVolume()">
+		  <a href="#" class="volume-btn" onclick="toggleVolumeMute()"><i class="fas fa-volume-up"></i></a>
+	  </div>
+      
+      <!-- ================ Audio ================ -->
+      <audio class="song" id="audio">
+      	<source src="./files/Covid-19.mp3" class="audioSrc" type="audio/mp3" />
+      </audio>
+    </section>
+  </div>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
